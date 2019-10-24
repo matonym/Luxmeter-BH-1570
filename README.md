@@ -12,7 +12,7 @@ Include BH1750.tbh in your global.tbh
 
 'INCLUDES------------------------------------------------------------
 
-include "\BH1750.tbh"
+include "BH1750.tbh"
 
 'DECLARATIONS--------------------------------------------------------
 
