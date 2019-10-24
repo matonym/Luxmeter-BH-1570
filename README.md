@@ -2,6 +2,9 @@
 A simple Luxmeter using BH-1570 using Tibbo EM2000 (I2C)
 ### Introduction
 A simple I2C example using the BH-1750 Luxmeter
+
+It has only been tested on the EM2000 but there's no reason it shouldn't work on other devices.
+
 ### Usage example
 
 Add the BH1750.tbs and BH1750.tbh to your project
