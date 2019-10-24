@@ -1,0 +1,28 @@
+include "global.tbh"
+'
+'====================================================================
+
+sub on_sys_init()
+
+    sys.onsystimerperiod = 20
+	
+	BH1750_Init(0, PL_IO_NUM_43, PL_IO_NUM_42, AddrL)
+
+	dim addr as BH1750_Address = BH1750_FindDeviceAddress()
+	
+	if addr = AddrL or addr = AddrH then
+	
+		Sys.debugprint("Found device: " + hex(addr) + chr(10))
+		
+		BH1750_Powerup()
+		BH1750_SetMode(ContHighRes)
+	
+	else
+		Sys.debugprint("No device found" + chr(10))
+			
+	end if	
+end sub
+
+sub on_sys_timer()
+	sys.debugprint("Light: "+str(BH1750_GetLux())+ " lx"+chr(10))
+end sub
